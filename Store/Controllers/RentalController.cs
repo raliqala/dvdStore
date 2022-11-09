@@ -54,9 +54,29 @@ namespace Store.Controllers
         }
 
         // POST api/<RentalController>
+        // rDate formart 2022-11-12
         [HttpPost("/api/addRental/{dvdId}/{customerId}/{rDate}")]
         public ActionResult<SuccessResponse> AddRental(int dvdId, int customerId, string rDate)
         {
+
+            SuccessResponse success = new()
+            {
+                Success = true,
+                Message = "Rental added Successfully",
+            };
+
+            var dvd = _handler.BLL_GetDvdById(dvdId);
+
+            if (dvd != null)
+            {
+                if (dvd.Status == "unavailable" || dvd.Quantity <= 0)
+                {
+                    success.Success = false;
+                    success.Message = "Sorry this dvd is out of stock";
+                    return success;
+                }
+            }
+
             DateTime date = DateTime.Now;
 
             string[] dates = rDate.Split('-');
@@ -69,12 +89,6 @@ namespace Store.Controllers
                 rentalDate = date.ToString(),
                 returnDate = returnDate.ToString(),
                 status = "in_progress",
-            };
-
-            SuccessResponse success = new()
-            {
-                Success = true,
-                Message = "Rental added Successfully",
             };
 
             if (_handler.BLL_AddRental(rental))
@@ -113,7 +127,7 @@ namespace Store.Controllers
         public JsonResult GetRental(int id)
         {
             this.IsOverDue();
-            var dvd = _handler.BLL_GetRentalById(id);
+            var rent = _handler.BLL_GetRentalById(id);
 
             SuccessResponse success = new()
             {
@@ -121,9 +135,9 @@ namespace Store.Controllers
                 Message = "Sorry could not get rental",
             };
 
-            if (dvd != null)
+            if (rent != null)
             {
-                return new JsonResult(dvd);
+                return new JsonResult(rent);
             }
 
             return new JsonResult(success);
