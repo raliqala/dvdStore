@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DB9FD49-EE08-46E4-B38A-2BC39F669A6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TypeLibrary</RootNamespace>
+    <AssemblyName>TypeLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interface\IDBAccess.cs" />
+    <Compile Include="Interface\IDBHandler.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DvdStorage.cs" />
+    <Compile Include="Models\Rental.cs" />
+    <Compile Include="Models\UpdateCustomer.cs" />
+    <Compile Include="Models\UpdateDvd.cs" />
+    <Compile Include="Models\UpdateRental.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\uspAdminExist.cs" />
+    <Compile Include="ViewModel\uspAdminSignIn.cs" />
+    <Compile Include="ViewModel\uspGetAdminProfile.cs" />
+    <Compile Include="ViewModel\uspGetCustomer.cs" />
+    <Compile Include="ViewModel\uspGetCustomers.cs" />
+    <Compile Include="ViewModel\uspGetDvd.cs" />
+    <Compile Include="ViewModel\uspGetDvdList.cs" />
+    <Compile Include="ViewModel\uspGetRentalById.cs" />
+    <Compile Include="ViewModel\uspGetRentalByStatus.cs" />
+    <Compile Include="ViewModel\uspGetRentals.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

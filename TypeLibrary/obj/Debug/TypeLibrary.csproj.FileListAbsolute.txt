@@ -1,0 +1,12 @@
+C:\Users\Topollo\source\repos\dvdStore\TypeLibrary\bin\Debug\TypeLibrary.dll
+C:\Users\Topollo\source\repos\dvdStore\TypeLibrary\bin\Debug\TypeLibrary.pdb
+C:\Users\Topollo\source\repos\dvdStore\TypeLibrary\obj\Debug\TypeLibrary.csproj.AssemblyReference.cache
+C:\Users\Topollo\source\repos\dvdStore\TypeLibrary\obj\Debug\TypeLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Topollo\source\repos\dvdStore\TypeLibrary\obj\Debug\TypeLibrary.dll
+C:\Users\Topollo\source\repos\dvdStore\TypeLibrary\obj\Debug\TypeLibrary.pdb
+C:\Users\raliq\source\repos\dvdStore\TypeLibrary\bin\Debug\TypeLibrary.dll
+C:\Users\raliq\source\repos\dvdStore\TypeLibrary\bin\Debug\TypeLibrary.pdb
+C:\Users\raliq\source\repos\dvdStore\TypeLibrary\obj\Debug\TypeLibrary.csproj.AssemblyReference.cache
+C:\Users\raliq\source\repos\dvdStore\TypeLibrary\obj\Debug\TypeLibrary.csproj.CoreCompileInputs.cache
+C:\Users\raliq\source\repos\dvdStore\TypeLibrary\obj\Debug\TypeLibrary.dll
+C:\Users\raliq\source\repos\dvdStore\TypeLibrary\obj\Debug\TypeLibrary.pdb
